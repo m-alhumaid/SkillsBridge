@@ -20,7 +20,7 @@ SkillsBridge is an e-learning platform designed to provide specialized course bo
 ## Screenshots
 
 ### Homepage
-![HomePage](https://github.com/user-attachments/assets/45eb5a36-6985-4eec-ad6a-5d859396e7c2)
+![HomePage](https://github.com/user-attachments/assets/f7f7b083-b49d-47c4-9cc1-79e42b2fc9dc)
 
 - **Why Us Section**  
 ![Why SkillsBridge](https://github.com/user-attachments/assets/21ceb83d-c8fa-47b1-9248-5d64e0a593a0)
