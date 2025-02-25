@@ -1,0 +1,68 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["PageId"] = "register";
+    var role = Request.Query["role"].ToString();
+}
+<body data-page="register">
+    <div class="container text-center" style="margin-top: 7rem !important">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-6">
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form" style="position: relative; top:0%;">
+                    <p class="title" style="justify-content:center; padding-left:0px !important;">Create Account</p>
+                    <!-- اسم المستخدم -->
+                    <label>
+                        <span style="padding: 4px; display:flex; justify-self:start;">Username</span>
+                        <input class="input" asp-for="Input.UserName" placeholder="Username" required />
+                    </label>
+                        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    
+                    <!-- البريد الإلكتروني -->
+                    <label>
+                        <span style="padding: 4px; display:flex; justify-self:start;">Email</span>
+                        <input class="input" asp-for="Input.Email" autocomplete="username" placeholder="" required />
+                    </label>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+                    <!-- كلمة المرور -->
+                    <label>
+                        <span style="padding: 4px; display:flex; justify-self:start;">Password</span>
+                        <input class="input" asp-for="Input.Password" type="password" autocomplete="new-password" placeholder="" required />
+                    </label>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+                    <!-- تأكيد كلمة المرور -->
+                    <label>
+                        <span style="padding: 4px; display:flex; justify-self:start;">Retype Password</span>
+                        <input class="input" asp-for="Input.ConfirmPassword" type="password" autocomplete="new-password" placeholder="" required />
+                    </label>
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+
+                    <!-- تحديد نوع الحساب -->
+                    <select name="Input.Role" style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; text-align: center;">
+                        @if (string.IsNullOrEmpty(@role))
+                        {
+                            <option value="Teacher">Teacher</option>
+                            <option value="Student">Student</option>
+                        }
+                        else
+                        {
+                            <option value="@role" selected>@role</option>
+                        }
+                    </select>
+
+
+                    <!-- زر التسجيل -->
+                    <button type="submit" class="submit">Submit</button>
+
+                    <!-- رابط تسجيل الدخول -->
+                    <p class="signin">Do you have an account ?<a asp-page="./Login">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
