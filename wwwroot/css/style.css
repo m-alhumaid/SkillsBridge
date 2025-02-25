@@ -1,0 +1,393 @@
+﻿body {
+  color: #333;
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.bg-container {
+  position: absolute;
+  background: url("/IMG/blob-scene-haikei.png");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(0.2);
+}
+
+.btn-login {
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+btn-login :hover {
+  background-color: white;
+  color: purple;
+}
+
+.btn-signup {
+  background-color: transparent;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.btn-signup:hover {
+  background-color: white;
+  color: purple;
+}
+
+.btn {
+  width: 110px;
+}
+
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+footer a {
+  color: #f3f7fe;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  flex: 1;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+.course-card {
+  min-width: 250px;
+  min-height: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 0px 0px 11px 0px;
+  text-align: center;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.course-image {
+  width: 100%;
+  height: 180px; /* تحديد ارتفاع الصورة */
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.course-content {
+  margin-top: 15px;
+}
+
+.course-content h5 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+  margin-left: 5%;
+}
+
+.course-content p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.status-active {
+  background-color: #27ae60;
+}
+
+.status-inactive {
+  background-color: #e74c3c;
+}
+
+.status-pending {
+  background-color: #f39c12;
+}
+
+.status-completed {
+  background-color: #8e44ad;
+}
+
+.btn-details {
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-details:hover {
+  background-color: #34495e;
+  color: white;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.slider-btn.left {
+  left: 15px;
+}
+
+.slider-btn.right {
+  right: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #1e3a8a;
+}
+
+.message,
+.signin {
+  font-size: 14.5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.signin a {
+  color: #1e3a8a;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  background-color: #f9f9f9;
+  color: #333;
+  width: 100%;
+  padding: 8px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: #1e3a8a;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+  background-color: #1e3a8a;
+}
+
+.submit:hover {
+  background-color: #1e3a8a96;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.home-page-header {
+  color: #fff;
+  padding-top: 10vw;
+  padding-bottom: 30vw;
+  text-align: center;
+}
+
+.wave-container {
+  svg {
+    z-index: -2;
+  }
+}
+
+.glass {
+  padding: 5rem 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  color: white;
+  /* Glass effect */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slightly transparent white background */
+  backdrop-filter: blur(8px); /* Blur the background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Softer shadow for a more subtle effect */
+  /* Optional: Add a border or slight separation between elements */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+}
+
+.glass h1 {
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5); /* Darker text shadow to make text stand out */
+}
+
+label {
+  span {
+    color: #9fbbff;
+  }
+}
+.bg-index {
+  background-color: transparent;
+}
+
+.bg-other {
+  background-color: #f0f0f0;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-blue {
+  background-color: blue !important;
+}
+
+.teacher-btn:hover {
+  background-color: white;
+}
+.student-btn:hover {
+  background: white;
+}
