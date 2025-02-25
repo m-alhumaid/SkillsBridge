@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SkillsBridge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62a889a88ab74019a9a3ac0fcfeee4ad0221d1b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SkillsBridge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SkillsBridge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
